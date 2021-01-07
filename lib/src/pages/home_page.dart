@@ -2,6 +2,7 @@ import 'package:comicbookapp/src/Widgets/grid_card_widget.dart';
 import 'package:comicbookapp/src/providers/list_comics_provider.dart';
 import 'package:flutter/material.dart';
 
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -69,7 +70,6 @@ class _HomePageState extends State<HomePage> {
   {
       return FutureBuilder(
         future: listComicProvider.cargarData(),
-        initialData: [],
         builder: (context, snapshot){
           if(snapshot.hasData)
             return Text('${snapshot.data}');

@@ -6,7 +6,6 @@ Widget gridCardComicWidget(BuildContext context)
   {
       return FutureBuilder(
         future: listComicProvider.cargarData(),
-        initialData: [],
         builder: (context, snapshot){
           if(snapshot.hasData){
           List<Widget> cards = [];
@@ -30,7 +29,6 @@ Widget gridCardComicWidget(BuildContext context)
   {
       return FutureBuilder(
         future: listComicProvider.cargarData(),
-        initialData: [],
         builder: (context, snapshot){
           if(snapshot.hasData){
             Comic comic = snapshot.data[0];
